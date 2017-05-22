@@ -5,12 +5,13 @@
 	<style type="text/css">
 		@font-face {
   font-family: 'iconfont';  /* project id 307904 */
-  src: url('//at.alicdn.com/t/font_stoneoyv3w86ko6r.eot');
-  src: url('//at.alicdn.com/t/font_stoneoyv3w86ko6r.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_stoneoyv3w86ko6r.woff') format('woff'),
-  url('//at.alicdn.com/t/font_stoneoyv3w86ko6r.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_stoneoyv3w86ko6r.svg#iconfont') format('svg');
-}		* {
+  src: url('//at.alicdn.com/t/font_0uer6f2qdbsgiudi.eot');
+  src: url('//at.alicdn.com/t/font_0uer6f2qdbsgiudi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_0uer6f2qdbsgiudi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_0uer6f2qdbsgiudi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_0uer6f2qdbsgiudi.svg#iconfont') format('svg');
+}
+		* {
 			margin: 0;
 			padding: 0;
 		}	
@@ -18,9 +19,12 @@
 			min-width: 1000px;
 		}
 		#header {
-			background-image: url(http://i2.muimg.com/1949/a23e0b6926d5f061.jpg);
-			background-repeat: no-repeat;
-			background-size: 100%;
+			background-image: url(http://i1.piimg.com/1949/b379e10ded5acb07.jpg);
+			/*background-repeat: no-repeat;
+			background-size: 100%;*/
+			background-size: cover;
+    			padding-bottom: 100px;
+  			
 		}
 		#layout {
 			width: 1000px;
@@ -29,7 +33,10 @@
 		}
 		.navbar-wrap {
 			background-color: rgba(34,34,34,.5);
-			
+			position: fixed;
+    			right: 0;
+   			left: 0;
+    			z-index: 10;
 		}
 		.navbar {
 			list-style: none;
@@ -45,19 +52,20 @@
 			border-radius: 4px;
 		}
 		.home a{
-
 			text-decoration: none;
-			font-size: 2.5em;
-			color: #ffe207;
-			font-family:'JennaSueac5defb0219209';
 			margin-left: 20px;
-			margin-right: 345px;
+			margin-right: 300px;
 			float: left;	
-				
 		}
-		.home>a:hover{
-			font-size: 2em;
-			font-weight: bold;
+		.navbar .home a img:hover{
+			border-radius: 3px;
+			background: rgba(255,255,255,.7);
+		}
+		
+		.navbar>.home>a>img {
+			width: 100px;
+			display: block;
+			margin-top: 20px;
 		}
 		.item a {
 			text-decoration: none;
@@ -82,17 +90,20 @@
 		.welcome {
 			color: white;
 			text-align: center;
-			padding-top:  150px;
+			padding-top:  180px;
 			padding-bottom: 100px;
 			vertical-align: middle;
+			position: relative;
+			top: 40px;
 		}
 		.welcome>.text-1 {
+			font-size: 1.6em;
 			font-family:'ChannelSlanted2acb53295019209';
 		}
 		.welcome>.text-2 {
 			font-family: 'COCOGOOSEac4cd08d219209';
 			font-weight: normal;
-			font-size: 4em;
+			font-size: 3em;
 		}
 		.welcome a{
 			font-size: 1.2em;
@@ -122,19 +133,22 @@
 		.syn-con,
 		.classic>.cla-h2,
 		.chara-ti,
-		.cast>.cast-h2{
+		.cast>.cast-h2,
+		.contact-h2{
     			text-align: center;
 		}
 		.syn-con>h2,
 		.classic>.cla-h2>h2,
-		.chara-ti>h2{
+		.chara-ti>h2,
+		.contact-h2>h2{
 			font-size: 2em;
 			margin: 10px;
 		}
 		.syn-con>p,
 		.classic>.cla-h2>p,
 		.chara-ti>p,
-		.cast-h2>p {
+		.cast-h2>p,
+		.contact-h2>p{
 			font-family:'SourceSansPro-Eace787b8b19209';
 			margin: 16px auto;
 			font-weight: normal;
@@ -174,14 +188,15 @@
 		.classic>ul,
 		.chara>.clara-ul,
 		.cast-ul,
-		.social {
+		.social,
+		.last2 {
 			list-style: none;
 		}
 		.classic>.cla-ul>.cla-li {
 			display: inline-block;
 			width: 300px;
 			float: left;
-			margin-left: 33px;
+			margin-left: 28px;
 			margin-top: 40px;
 			border-radius: 8px;
 			background: white;
@@ -294,21 +309,127 @@
 		}
 		.cast-li>.social>li {
 			display: inline-block;
-			margin: 10px;
+			margin: 8px;
 			
 		}
-		.social>li>a{
+		.social>li>a,
+		.last2>li>a {
 			font-family: iconfont;
 			font-size:30px;
 			text-decoration: none;
+			color:#000;
 		}
-		.cast-ul>.cast-li>.social>li>a:hover{
+		.social>li>a:hover,
+		.last2>li>a:hover{
 			color:#fed136;
 		}
 		.cast-li>h4 {
 			padding: 15px;
 		}
+		.contact{
+			padding-bottom: 60px;
+  			padding-top: 50px;
+		}
+		.form>form>.text1{
+			float: left;
+			margin-left: 70px;
+		}
+		.form>form>.text1>input {
+			display: block;
+			width: 400px;
+			border:1px solid #ccc;
+			border-radius: 5px;
+			height: 35px;
+			padding:10px;
+			margin-top:  10px;
+		}
+		
+		.btn {
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border:1px solid transparent;
+			background: #ffc90e;
+			padding:15px;
+			width: 250px;
+			line-height: 1.5;
+			
+			font-size: 125%;
+			border-radius: 6px;
+			color: white;
+			
+		}
+		#message{
+			display: inline-block;
+			padding:10px;
+			width: 400px;
+			height: 170px;
+			border:1px solid #ccc;
+			border-radius: 5px;
+			float: right;
+			margin-right: 70px; 
+			margin-top: 10px;
+		}
+		.text2:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		#message:focus,
+		#layout .text1>input:focus{
+			outline: none;
+			border-color:#Fed136;
+			box-shadow: none;
+		}
+		#footer{
+			background: #F3F3F3;
+			padding-top: 20px;
+			padding-bottom: 20px;
 
+		}
+		#footer>.last a {
+			text-decoration: none;
+			color: #000;
+		}
+		
+		
+		#footer>.last>.last2>li {
+			display: inline-block;
+			float: left;
+			margin-left: 15px;
+		}
+		.last1{
+			float: left;
+			position: relative;
+  			top: 12px;
+			left:20px;
+
+		}
+		.last3{
+			float:right;
+			position: relative;
+  			top: 12px;
+  			left:-20px;
+		}
+
+		.last:after,
+		.last>.last1:after,
+		.last>.last3:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.last>.last2>li>a{
+			font-family: iconfont;
+    			font-size: 30px;
+		}
+		.last>.last2{
+			width: 300px;
+			display: inline-block;
+			vertical-align: middle;
+			 margin-left: 185px;
+		}
+		
 	</style>
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/102921/45817/59204c41f629d8112439ae43.css' rel='stylesheet' type='text/css' />
 	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/102921/47031/591ea0b4f629d818a89ed028.css' rel='stylesheet' type='text/css' />
@@ -342,24 +463,30 @@
 			<div class="navbar-wrap">
 				<ul class="navbar" id="layout">
 					<li class="home">
-					<a href="">Friends</a></li>
+					<a href="#">
+					
+				<img src='http://i4.buimg.com/1949/0b8c68dbf817523e.png'>
+			
+					</a>
+					</li>
 					<li class="item a1">
-					<a href="">SYNOPSIS</a></li>
+					<a href="#">SYNOPSIS</a></li>
 					<li class="item a2">
-					<a href="">CLASSIC-CLIPS</a></li>
+					<a href="#">CLASSIC-CLIPS</a></li>
 					<li class="item a3">
-					<a href="">CHARACTER</a></li>
+					<a href="#">CHARACTER</a></li>
 					<li class="item a4">
-					<a href="">CAST</a></li>
+					<a href="#">CAST</a></li>
 					<li class="item a5">
-					<a href="">CONTACT</a></li>
+					<a href="#">CONTACT</a></li>
 				</ul>
 			</div>
 			<div class="welcome" id="layout">
 				<h1 class="text-1">Welcome To Our Studio!</h1>
 				<h1 class="text-2">IT'S NICE TO MEET YOU</h1>
-				<a href="">TELL ME MORE</a>
+				<a href="#">TELL ME MORE</a>
 			</div>
+			
 		</div>
 		<div class="content">
 			<div class="syn">
@@ -487,7 +614,7 @@
 						<ul class="social">
 							<li><a href="#">&#xe66c;</a></li>
 							<li><a href="#">&#xe621;</a></li>
-							<li><a href="#">&#xe67b;</a></li>
+							<li><a href="#">&#xe60f;</a></li>
 						</ul>
 					</li>
 					<li class="cast-li">
@@ -497,7 +624,7 @@
 						<ul class="social">
 							<li><a href="#">&#xe66c;</a></li>
 							<li><a href="#">&#xe621;</a></li>
-							<li><a href="#">&#xe67b;</a></li>
+							<li><a href="#">&#xe60f;</a></li>
 						</ul>
 					</li>
 					<li class="cast-li">
@@ -509,13 +636,46 @@
 							<a href="#">&#xe66c;</a>
 							</li>
 							<li><a href="#">&#xe621;</a></li>
-							<li><a href="#">&#xe67b;</a></li>
+							<li><a href="#">&#xe60f;</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
+			
 			<div class="contact">
-				
+				<div class="contact-h2" id="layout">
+					<h2>Contact Us</h2>
+					<p>I finally finished my homework!</p>
+				</div>
+				<div class="form" id="layout">
+					<form action="">
+					<div class="text1">
+						<input type="text" placeholder="Your Name *" >	
+						<input type="text" placeholder="Your Email *">
+						<input type="text" placeholder="Your Phone *">
+					</div>
+					<div class="text2">
+						<textarea name="text" id="message" placeholder="Your Message *" ></textarea>
+					</div>	
+						<button class="btn" type="submit">Send Message</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="layout" class="last">
+				<div class="last1">
+					<span>Copyright &copy; Your Website 2017</span>
+				</div>
+				<ul class="last2">
+					<li><a href="#">&#xe66c;</a></li>
+					<li><a href="#">&#xe621;</a></li>
+					<li><a href="#">&#xe60f;</a></li>
+				</ul>
+				<div class="last3">
+					<a href="#">Privacy Policy</a>
+					<a href="#">Terms of Use</a>
+				</div>
 			</div>
 		</div>
 	</div>
