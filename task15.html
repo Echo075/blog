@@ -388,6 +388,7 @@
 		#footer>.last{
 			padding-top: 20px;
 			padding-bottom: 20px;
+			position: relative;
 		}
 		#footer>.last a {
 			text-decoration: none;
@@ -410,8 +411,8 @@
 		.last3{
 			float:right;
 			position: relative;
-  			top: 12px;
   			left:-20px;
+			padding: 10px;
 		}
 
 		.last:after,
@@ -425,20 +426,15 @@
 			font-family: iconfont;
     			font-size: 30px;
 		}
+		.last>.last2>li{
+			margin:0 auto;
+		}
 		.last>.last2{
-			width: 300px;
+			width: 135px;
 			display: inline-block;
-			vertical-align: middle;
-			 margin-left: 135px;
-		}
-		.last1:before{
-			content: '';
-			display: inline-block;
-			height: 100%;
-			vertical-align: middle;
-		}
-		.last>.last1>span {
-			vertical-align: middle;
+			position: absolute;
+			left: 50%;
+			margin-left: -67px;
 		}
 		
 	</style>
